@@ -22,9 +22,27 @@ nav a:hover{background:#FFF0D6;border-color:#1A1A1A}
 
 .hero{padding:36px 20px}
 .hero-wrap{max-width:1200px;margin:auto;display:grid;grid-template-columns:420px 1fr;gap:40px;align-items:center;background:rgba(255,248,240,.88);border:3px solid #1A1A1A;border-radius:32px;padding:28px;box-shadow:8px 8px 0 #1A1A1A}
-.logo-card{background:#fff;border:3px solid #1A1A1A;border-radius:28px;padding:18px;box-shadow:6px 6px 0 #1A1A1A;transform:rotate(-1deg);position:relative}
-.logo-card img{width:100%;border-radius:18px;border:2px solid #1A1A1A;display:block}
-.tape{position:absolute;top:-12px;right:18px;background:#2AB7A5;color:#1A1A1A;font-family:'Fredoka';font-weight:700;font-size:11px;padding:6px 12px;border:2.5px solid #1A1A1A;border-radius:999px;transform:rotate(3deg)}
+
+/* Estilos de la columna de medios (Logo y Video) */
+.hero-media{display:flex;flex-direction:column;gap:20px;align-items:center}
+
+/* Logo limpio y grande sin marcos sobrantes */
+.logo-clean{width:100%;text-align:center}
+.logo-clean img{
+  width:100%;
+  max-width:360px;
+  height:auto;
+  border-radius:20px;
+  border:3px solid #1A1A1A;
+  box-shadow:6px 6px 0 #1A1A1A;
+  display:block;
+  margin:0 auto;
+}
+
+/* Contenedor del video corto animado */
+.video-container{width:100%;border:3px solid #1A1A1A;border-radius:20px;overflow:hidden;box-shadow:6px 6px 0 #1A1A1A;background:#000}
+.video-container video{width:100%;height:auto;display:block;object-fit:cover}
+
 .pill{display:inline-block;background:#1A1A1A;color:#fff;font-family:'Fredoka';font-size:11px;padding:6px 12px;border-radius:999px;letter-spacing:.5px;margin-bottom:12px}
 .hero-text h1{font-size:52px;line-height:.9;letter-spacing:-1.5px}
 .hero-text h1 span{color:#2AB7A5;text-decoration:underline;text-decoration-color:#D9B57A;text-decoration-thickness:8px}
