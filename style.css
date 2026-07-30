@@ -97,20 +97,28 @@ nav a:hover {
   box-shadow: 0 4px 12px rgba(42, 183, 165, 0.3);
 }
 
-/* HERO DE ANCHO COMPLETO */
+/* HERO DE ANCHO COMPLETO DE LADO A LADO */
 .hero {
   position: relative;
-  height: 540px;
+  height: 560px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  margin: 0 0 40px 0; /* Sacamos el margen centrado para que toque los bordes laterales */
-  width: 100%;       /* Ocupa el 100% de la pantalla */
-  border-radius: 0;   /* Sacamos las esquinas redondeadas externas si querés full ancho continuo */
+  margin: 0 0 40px 0; /* Eliminamos el margen automático para que toque los extremos */
+  width: 100%;        /* Ocupa el 100% de la ventana horizontalmente */
+  border-radius: 0;   /* Quitamos los bordes redondeados para que sea un banner completo */
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   background: #111;
+}
+
+.hero-bg-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* Llena todo el espacio recortando lo necesario sin deformar */
+  object-position: center;
+  background: #1a1a1a;
 }
 .hero-bg-video {
   position: absolute;
