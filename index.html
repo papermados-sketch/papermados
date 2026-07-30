@@ -55,7 +55,7 @@
   </div>
 </section>
 
-<!-- SECCIÓN PERSONAJES (CARRUSEL CON FLECHAS Y ANIMACIÓN) -->
+<!-- SECCIÓN PERSONAJES (CARRUSEL CON BOTONES CIRCULARES) -->
 <section id="personajes" class="section">
   <div class="section-title">
     <h2>Los Personajes</h2>
@@ -195,15 +195,14 @@
   </div>
 </footer>
 
-<!-- SCRIPT DE CONTROL DE FLECHAS Y ANIMACIÓN DE INICIO -->
 <script>
   function scrollCarrusel(direction) {
     const carrusel = document.getElementById('carruselPersonajes');
-    const scrollAmount = 324; // Ancho de la tarjeta + gap
+    const scrollAmount = 324;
     carrusel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
   }
 
-  // Efecto automático sutil al cargar la página para indicar que se puede deslizar
+  // Pequeño movimiento inicial para mostrar que se desliza
   window.addEventListener('DOMContentLoaded', () => {
     const carrusel = document.getElementById('carruselPersonajes');
     setTimeout(() => {
