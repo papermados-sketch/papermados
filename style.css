@@ -268,7 +268,7 @@ nav a:hover {
   margin-top: 6px;
 }
 
-/* CONTENEDOR Y FLECHAS DEL CARRUSEL */
+/* CONTENEDOR Y BOTONES CIRCULARES ESTILO AMARILLO (COMO LA REFERENCIA) */
 .carrusel-container {
   position: relative;
   display: flex;
@@ -294,44 +294,43 @@ nav a:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffcc00; /* Color amarillo llamativo de la referencia */
   color: #1a1a1a;
-  border: 2px solid rgba(0, 0, 0, 0.08);
-  width: 45px;
-  height: 45px;
+  border: none;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
   cursor: pointer;
   z-index: 10;
   display: grid;
   place-items: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   transition: all 0.2s ease;
 }
 
 .carrusel-btn:hover {
-  background: #2AB7A5;
-  color: #fff;
-  border-color: #2AB7A5;
-  transform: translateY(-50%) scale(1.08);
+  background: #ffdb4d;
+  transform: translateY(-50%) scale(1.1);
 }
 
 .prev-btn {
-  left: -20px;
+  left: -25px;
 }
 
 .next-btn {
-  right: -20px;
+  right: -25px;
 }
 
-/* Animación de aviso en la flecha derecha */
-@keyframes pulseArrow {
-  0%, 100% { transform: translateY(-50%) scale(1); }
-  50% { transform: translateY(-50%) scale(1.12); background-color: #2AB7A5; color: #fff; }
+/* Animación sutil en la flecha derecha para llamar la atención */
+@keyframes pulseYellow {
+  0%, 100% { transform: translateY(-50%) scale(1); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+  50% { transform: translateY(-50%) scale(1.12); box-shadow: 0 8px 25px rgba(255, 204, 0, 0.6); }
 }
 
 .next-btn {
-  animation: pulseArrow 2s infinite ease-in-out;
+  animation: pulseYellow 2s infinite ease-in-out;
   animation-delay: 1.5s;
 }
 
@@ -545,7 +544,7 @@ nav a:hover {
   color: #444;
 }
 
-/* FOOTER ACTUALIZADO */
+/* FOOTER */
 footer {
   background: rgba(255, 255, 255, 0.95);
   border-top: 1px solid rgba(0,0,0,0.08);
@@ -564,11 +563,6 @@ footer {
 }
 
 .f-brand {
-  default {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
   display: flex;
   align-items: center;
   gap: 12px;
